@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive nav bar</title>
+    <link rel="stylesheet" href="navheader.css">
+    <script src="navbarheader.js"></script>
+</head>
+<body>
+    <header>
+        <img src="https://t3.ftcdn.net/jpg/02/51/80/40/360_F_251804029_ON3oL8BkopdueiT61zXaDMOF3qfSiWNx.jpg" alt="" class="logo">
+        <nav>
+            <ul class="navlinks">
+                <li class="items"><a href="#">Home</a></li>
+                <li class="items"><a href="#">Services</a></li>
+                <li class="items"><a href="#">Blog</a></li>
+                <li class="items"><a href="#">About-Us</a></li>
+                <li><a href="#"><button>Contact Us</button></a></li>
+                <li onclick="showSidebar()"><a href="#"><ion-icon name="menu-outline"></ion-icon></a></li>
+            </ul>
+            <ul class="sidebar">
+                <li onclick="closeSidebar()"><a href="#"><ion-icon name="close-outline"></ion-icon></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About-Us</a></li>
+                <img src="https://t3.ftcdn.net/jpg/02/51/80/40/360_F_251804029_ON3oL8BkopdueiT61zXaDMOF3qfSiWNx.jpg" alt="" >
+            </ul>
+        </nav>
+    </header>
+</body>
+        <h2>
+            Adjust the screen to Mobile View to observe the reactions on navigation bar
+        </h2>
+        
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

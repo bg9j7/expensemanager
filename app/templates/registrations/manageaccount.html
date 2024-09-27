@@ -1,0 +1,11 @@
+{% extends 'dashboard.html' %}  
+{% block content %}
+<div class="flex flex- column flex-center ">  
+    <ul>
+        <li>Accounts</li>
+        {%for bank in banks %}
+        <li>{{bank.name}}: {{bank.balance}}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

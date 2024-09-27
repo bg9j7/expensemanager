@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block body %}
+
+    <div class="flex flex-column flex-center gap-small">
+        
+    <h2>Register</h2>
+    <form class="flex flex-column flex-center" method="post" action="{{ url_for('auth.register') }}">
+            {{ form.hidden_tag() }}
+                {{ form.username.label }}
+                {{ form.username(size=32) }}
+                {{ form.email.label }}
+                {{ form.email(size=32) }}
+                {{ form.password.label }}
+                {{ form.password(size=32) }}
+                {{ form.password2.label }}
+                {{ form.password2(size=32) }}
+            {{ form.submit(class="button") }}
+        </form>
+        <br>
+        <a href="{{url_for('auth.login')}}">Login</a>
+    </div>
+
+
+
+{% endblock %}

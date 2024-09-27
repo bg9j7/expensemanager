@@ -1,0 +1,113 @@
+/* Variables */
+:root {
+  --font-family: Arial, sans-serif;
+  --background-color: #f4f4f4;
+  --form-background: #fff;
+  --border-color: #ccc;
+  --button-background: #3498db;
+  --button-color: #fff;
+  --button-hover-background: #2980b9;
+  --input-padding: 10px;
+  --input-margin: 10px 0;
+  --input-border-radius: 5px;
+  --form-margin: 20px auto;
+  --form-padding: 20px;
+  --form-width: 90%;
+  --form-max-width: 600px;
+  --grid-gap: 10px;
+  --fieldset-border-radius: 5px;
+  --fieldset-padding: 15px;
+  --legend-font-size: 1.2em;
+}
+
+/* Body Styles */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 20px;
+}
+
+/* Form Container */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Data Form */
+.data-form {
+  background-color: var(--form-background);
+  border: 1px solid var(--border-color);
+  border-radius: var(--input-border-radius);
+  margin: var(--form-margin);
+  padding: var(--form-padding);
+  width: var(--form-width);
+  max-width: var(--form-max-width);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.data-form fieldset {
+  border: 1px solid var(--border-color);
+  border-radius: var(--fieldset-border-radius);
+  padding: var(--fieldset-padding);
+  margin-bottom: var(--input-margin);
+}
+
+.data-form legend {
+  font-size: var(--legend-font-size);
+  padding: 0 10px;
+}
+
+.form-grid {
+  margin-right:1em;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: var(--grid-gap);
+}
+
+.form-grid label {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.form-grid input {
+  width: 100%;
+  padding: var(--input-padding);
+  margin-bottom: var(--input-margin);
+  border: 1px solid var(--border-color);
+  border-radius: var(--input-border-radius);
+}
+
+.data-form button {
+  background-color: var(--button-background);
+  color: var(--button-color);
+  padding: var(--input-padding);
+  border: none;
+  border-radius: var(--input-border-radius);
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.data-form button:hover {
+  background-color: var(--button-hover-background);
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+  .data-form {
+    width: 80%;
+  }
+}
+
+@media (min-width: 900px) {
+  .data-form {
+    width: 60%;
+  }
+}
+.flexrow{
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+|}

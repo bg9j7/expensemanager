@@ -1,0 +1,67 @@
+{%extends 'base.html'%}
+
+
+{% block body %} 
+    <header class="flex flex-row flex-between header">
+        <div class="padding-small">
+            <a href="{{url_for('main.dashboard')}}"><img alt="logo" src="{{url_for('static', filename='logo.png')}}"></a>
+        </div>
+        <nav >
+            <ul class="flex flex-row nav-links">
+                <li ><a href="{{url_for('main.dashboard')}}">Home</a></li>
+                <li><a href="{{url_for('auth.logout')}}">logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="wrapper-grid">
+        <aside class="sidebar">
+            <nav>
+                <ul class="nav-links flex-column">
+                    <li class="dropdown">
+                        <a href="#">bank</a>
+                        <div class="dropdown-content">
+                            <a href="{{url_for('registrations.update_bank')}}">Update Account</a>
+                            <a href="{{url_for('registrations.addbank')}}">Add new Account</a>
+                            <a href="{{url_for('registrations.managebankaccount')}}">Manage Accounts</a>
+                        </div>
+
+                    </li>
+                    <li><a href="{{url_for('registrations.additem')}}">Add Items</a></li>
+                    <li><a href="#">Remove Items</a></li>
+                    <li><a href="#">View Orders</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
+
+    <footer class="flex flex-row flex-between footer">
+            <div>Logo</div>
+            <nav>
+                <ul class="nav-links flex flex-row gap-small">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        <p>&copy; 2024 My Web App. All rights reserved.</p>
+    </footer>
+
+
+
+<div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Enter a Number</h2>
+            <input type="number" id="numberInput" placeholder="Enter number">
+            <button id="submitBtn">Submit</button>
+            <p id="message" class="message"></p>
+        </div>
+</div>
+
+{%endblock%}

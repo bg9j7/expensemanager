@@ -1,0 +1,16 @@
+{% extends "dashboard.html" %}
+{% block content %}
+<div class="flex flex- column flex-center ">
+    <form class="flex flex-column" method="post" action="{{ url_for('registrations.update_bank') }}">
+        {{ form.hidden_tag() }}
+        {{form.action.label}}
+        {{ form.action }}
+        {{ form.name.label }} {{ form.name(size=32) }}
+        {{ form.account.label }} {{ form.account(size=32) }}
+        {{form.amount.label}} {{form.amount(size=32)}}
+        {{ form.submit(class="button") }}
+    </form>
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "dashboard.html" %}
+{% block content %}
+<div class="flex-column">
+    <form class="form" method="post" action="{{ url_for('registrations.additem') }}">
+        {{ form.hidden_tag() }}
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Purchase Location</th>
+                    <th>Category</th>
+                    <th>purchase Date</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in form.items %}
+                {{ form.hidden_tag() }}
+                <tr>
+                    {% for field in item %}
+                        <td>{{ field }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        {{ form.submit(class="button") }}
+    </form>
+</div>
+
+{% endblock %}
